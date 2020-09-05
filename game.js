@@ -35,6 +35,15 @@ $(document).on("keydown", function() { //check if user has pressed any key
 
 });
 
+$(document).on("click", function() { //check if user has clicked on the body (for mobile)
+
+	if (!gameStarted) { //check to be sure the game hasn't already started because key press should only start new game when there isn't an existing game
+		nextSequence(); //show the user the next box in the sequence
+		gameStarted = true; //let the program know that a game has already been started so as to disable starting new game on key press
+	}
+
+});
+
 // Function to play sounds
 function playSound(name) {
 	var audio = new Audio("sounds/" + name + ".mp3");
@@ -83,7 +92,7 @@ function checkAnswer(currentLevel) {
 			$("body").removeClass("game-over");
 		}, 200);
 
-		$("#level-title").text("Game Over, Press Any Key to Restart");
+		$("#level-title").text("Game Over, Press Any Key or Click Anywhere to Restart");
 
 		playSound("wrong");
 
