@@ -8,7 +8,7 @@ var gameStarted = false; //variable to store whether a new game has started
 
 var level = 0; //variable to store current level
 
-// Function that runs the next box in the sequence
+// Function that shows the next box in the sequence
 function nextSequence() {
 	var randomNumber = Math.floor(Math.random() * 4); //select random number between 1 and 3
 	
