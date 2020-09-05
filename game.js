@@ -35,7 +35,7 @@ $(document).on("keydown", function() { //check if user has pressed any key
 
 });
 
-$(document).on("click", function() { //check if user has clicked on the body (for mobile)
+$(document).on("click touch", function() { //check if user has clicked on the body (for mobile)
 
 	if (!gameStarted) { //check to be sure the game hasn't already started because key press should only start new game when there isn't an existing game
 		nextSequence(); //show the user the next box in the sequence
